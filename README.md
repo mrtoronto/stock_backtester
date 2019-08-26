@@ -77,3 +77,6 @@ Each run of the back-tester will use specified trading strategies to maintain a 
 ## To do
 
 - Add more strategies. 
+
+- Improve output.
+    - Adding some sort of spreadsheet/table for a run would be a nice way to make the results more readable and organizable than a picture.
