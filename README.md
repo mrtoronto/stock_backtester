@@ -80,3 +80,10 @@ Each run of the back-tester will use specified trading strategies to maintain a 
 
 - Improve output.
     - Adding some sort of spreadsheet/table for a run would be a nice way to make the results more readable and organizable than a picture.
+    
+- Add local cache for data.
+
+- Add more data. 
+    - New data could include:
+        - Financial Data: Net Income, Revenue
+        - Multiples: P/E, P/B, P/S 
