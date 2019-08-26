@@ -1,3 +1,7 @@
+"""
+Function takes in a DataFrame and adds indicators to the DataFrame.
+"""
+
 def add_indicators(df):
     df['day_difference'] = df['Close'].diff(1)
     df['day_diff_perc'] = (df['Close'].diff(1) / df['Close']) * 100

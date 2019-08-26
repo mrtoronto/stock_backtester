@@ -1,3 +1,11 @@
+"""
+Import strategies from the strategies folder and use the functions to calculate returns on the provided DataFrame.
+
+Make sure to name each strategy uniquely so the resulting DataFrame/plot doesn't have repeated columns.
+
+Return the updated DataFrame and the list of strategy names.
+"""
+
 from strategies.example_strategy import example_strategy
 from strategies.macd_crossover_strategy import macd_strategy
 from strategies.scaled_macd_crossover_strategy import scaled_macd_strategy
