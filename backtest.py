@@ -32,10 +32,10 @@ Source options: `stooq.com`, Yahoo! Finance, Quandl
     Yahoo Finance is good and up to date.
         history_test_df = yf.download(test_symbol, start=start_date, end=end_date)
 """
-
 history_test_df = yf.download(test_symbol, start=start_date, end=end_date)
 ### Grab S&P500 data for the same time range
 history_sp_df = yf.download(sp_symbol, start=start_date, end=end_date)
+
 ### Add indicators to the test ticker's DataFrame
 history_test_df = add_indicators(history_test_df)
 
@@ -61,4 +61,5 @@ n=10
 print("First {} days\n#####\n".format(n), print_df.head(n))
 print("Last {} days\n".format(n), print_df.tail(n))
 
+### Run plot function
 plot_fn(history_test_df, strat_names, cash, test_symbol, save_image='')
