@@ -1,9 +1,9 @@
 """
-Function will take in a DataFrame, list of strategy names, amount of starting cash, ticker that's being tested and the image save location.
+Function will take in a DataFrame, list of strategy names, amount of starting cash, ticker that's being 
+tested and the image save location.
 
-
+Output is a plot of the net worth of each strategy in the portfolio over time.
 """
-
 
 import os
 import matplotlib.pyplot as plt
