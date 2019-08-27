@@ -6,7 +6,7 @@ Running `backtest.py` will perform a run of the script. The output will be a plo
 
 Each run of the back-tester will use specified trading strategies to maintain a portfolio of stock over the specified timeframe. The results of all the strategies are plotted to be compared to each other and to the results of a "buy and hold" strategy on the S&P500 using the same amount of money.
 
-[](blob:https://imgur.com/2e726922-4918-4c51-829a-53705ca8a2de)
+![](https://i.imgur.com/pw9iIWU.png)
 
 ## Run description
 
