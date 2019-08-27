@@ -1,33 +1,20 @@
 # stock_backtester
 
-Running `backtest.py` from the terminal will perform a full run of the back-tester. The output will be a plot of the back-test.
+## General
+
+Running `backtest.py` will perform a run of the script. The output will be a plot of the back-test.
 
 Each run of the back-tester will use specified trading strategies to maintain a portfolio of stock over the specified timeframe. The results of all the strategies are plotted to be compared to each other and to the results of a "buy and hold" strategy on the S&P500 using the same amount of money.
 
-## Example output plot
-
-![](https://i.imgur.com/pw9iIWU.png)
-
-### Plot elements
-
-1. Plot legend
-    - Dynamically generated to fit all the strategies included in the `strat_list` in the `add_strategies` script using their specified names.
-
-2. Run data
-    -  Data included:
-      - Length of run
-      - Starting Cash
-      - Tested Ticker
-      - For each strategy:
-        - Final net worth
-        - Total profit ($ and %)
-
+[](blob:https://imgur.com/2e726922-4918-4c51-829a-53705ca8a2de)
 
 ## Run description
 
-1. Pull test ticker and S&P500 data from one of various sources.
-    - There are a few source readers included in this project because I hit limits on some and wanted to keep using the backtester...
-    - Yahoo! Finance is the most reliable but stooq.com is comparable until you hit the daily limit.
+1. Pull test ticker and S&P500 data from Yahoo! Finance or cache file created by process.
+    - Changing the `cache` boolean to `False` will make the process pull fresh every run.
+    - Cache folder and subfolders for each ticker will be created if necessary.
+    - Partially complete cache data will be filled in from Yahoo! Finance.
+        - If cache had data from '2017-01-01'-'2018-01-01' for a ticker and user requested data from '2017-01-01'-'2018-06-01' for the same ticker, process will pull data for '2018-01-01'-'2018-06-01' from Yahoo! Finance and update the stored cache file.
 
 2. Derive indicators from the raw data.
     - Done in the `indicators.py` script.
@@ -76,14 +63,4 @@ Each run of the back-tester will use specified trading strategies to maintain a 
 
 ## To do
 
-- Add more strategies. 
-
-- Improve output.
-    - Adding some sort of spreadsheet/table for a run would be a nice way to make the results more readable and organizable than a picture.
-    
-- Add local cache for data.
-
-- Add more data. 
-    - New data could include:
-        - Financial Data: Net Income, Revenue
-        - Multiples: P/E, P/B, P/S 
+- Add more strategies.
